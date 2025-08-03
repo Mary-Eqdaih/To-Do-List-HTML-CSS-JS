@@ -80,25 +80,7 @@ function show() {
 }
 window.onload = function () {
   show();
-  createStars();
+  
 };
 
-function createStars(count = 60) {
-  const container = document.querySelector(".stars");
 
-  for (let i = 0; i < count; i++) {
-    const star = document.createElement("div");
-    star.className = "star";
-    star.textContent = "✦";
-
-    // Random position
-    star.style.top = `${Math.random() * 100}%`;
-    star.style.left = `${Math.random() * 100}%`;
-
-    // Optional: random size for variety
-    const size = Math.random() * 24 + 12; // 12px to 36px
-    star.style.fontSize = `${size}px`;
-
-    container.appendChild(star);
-  }
-}
